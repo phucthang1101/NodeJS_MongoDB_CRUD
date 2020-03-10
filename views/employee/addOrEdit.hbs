@@ -1,0 +1,46 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/employee" method="POST" autocomplete="off">
+<input type="hidden" name="id" value="{{employee.id}}"/>
+    <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input autocomplete="off" type="text" name="fullName" id="" class="form-control" placeholder="Full Name"
+            aria-describedby="helpId" value="{{employee.fullName}}">
+        <div class="text-danger">
+            {{employee.fullNameErr}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="">Email</label>
+        <input type="text" name="email" id="" class="form-control" placeholder="Email" aria-describedby="helpId"
+            value="{{employee.email}}">
+        <div class="text-danger">
+            {{employee.emailErr}}
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="">City</label>
+            <input type="text" name="city" id="" class="form-control" placeholder="City" aria-describedby="helpId"
+                value="{{employee.city}}">
+
+        </div>
+        <div class="form-group col-md-6">
+            <label for="">Mobile</label>
+            <input type="text" name="mobile" id="" class="form-control" placeholder="Mobile" aria-describedby="helpId"
+                value="{{employee.mobile}}">
+
+        </div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info">
+            <i class="fa fa-database" aria-hidden="true"></i>
+            Submit
+        </button>
+        <a class="btn btn-primary" href="/employee/list">
+            <i class="fa fa-list-alt" aria-hidden="true"></i>
+            View All
+        </a>
+    </div>
+
+</form>
